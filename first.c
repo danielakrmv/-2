@@ -94,12 +94,7 @@ char* randomName(char* name){
     for (int i = 0; i < n; i++){
         name[index++] = randint('a', 'z');
     }
-    name[index++] = ' ';
-    n = randint(4, 10);
-    name[index++] = randint('A', 'Z');
-    for (int i = 0; i < n; i++){
-        name[index++] = randint('a', 'z');
-    }
+
     name[index] = '\0';
     return name;
 }
@@ -155,5 +150,5 @@ int cmpPriceDSC(const void *cp1, const void *cp2){
 void printCAR(CAR *c){
     printf("Model is: %25s ", c->model);
     printf("Maximum speed is: %25u ", c->maxspeed);
-    printf("Price is: %4lf ", c->price);
+    printf("Price is: %4.2lf\n", c->price);
 }
